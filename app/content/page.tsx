@@ -36,12 +36,29 @@ const ContentPage = async () => {
         <ul>
           {mediaList.map((Media) => (
             <li key={Media.MediaID}>
-              <img
-                src={
-                  "http://127.0.0.1:5000/media/media_data/" + Media.hostedURL
-                }
-                alt={Media.hostedURL}
-              />
+              <div className="media-container">
+                {" "}
+                {Media.MediaType === ".mp4" ? (
+                  <video
+                    src={
+                      "http://127.0.0.1:5000/media/media_data/" +
+                      Media.hostedURL
+                    }
+                    autoPlay
+                    muted
+                  >
+                    Browser does not support the video.
+                  </video>
+                ) : (
+                  <img
+                    src={
+                      "http://127.0.0.1:5000/media/media_data/" +
+                      Media.hostedURL
+                    }
+                    alt={Media.hostedURL}
+                  />
+                )}
+              </div>
             </li>
           ))}
         </ul>
