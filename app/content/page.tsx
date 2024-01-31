@@ -23,7 +23,7 @@ const ContentPage = async () => {
   const mediaList: Media[] = data.media;
 
   return (
-    <main>
+    <>
       <div>
         <h1>This is the Content Page</h1>
       </div>
@@ -48,7 +48,7 @@ const ContentPage = async () => {
       </div>
 
       <div></div>
-    </main>
+    </>
   );
 };
 
