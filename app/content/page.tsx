@@ -1,26 +1,10 @@
 import React from "react";
 
-interface Media {
-  MediaID: string;
-  ConfigID: string;
-  MediaType: string;
-  MediaOrder: number;
-  PresignedURL: string;
-  hostedURL: string;
-}
+import { Media } from "../lib/definitions";
+import { fetchMediaData } from "../lib/utils";
 
 const ContentPage = async () => {
-  const response = await fetch(
-    "http://127.0.0.1:5000/media/download_latest_media",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  const data = await response.json();
-  const mediaList: Media[] = data.media;
+  const mediaList: Media[] = await fetchMediaData();
 
   return (
     <>
