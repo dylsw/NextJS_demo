@@ -6,7 +6,15 @@ const ChatbotPage = () => {
     <main>
       <div>
         <h1>Chatbot Page</h1>
-        <Link href="/chatbot/newConversation"> To New Conversation Page</Link>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        Main Chatbot
+        <br />
+        <br />
       </div>
     </main>
   );
