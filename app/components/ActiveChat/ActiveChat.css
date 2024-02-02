@@ -1,0 +1,23 @@
+/* Add these styles to your CSS file */
+
+.activechat-container {
+  padding: 7vw;
+  border: 4px solid gray;
+  margin: 15px 10vw;
+  border-radius: 40px;
+}
+
+.chat-container {
+  max-height: 50vh; /* Adjust the maximum height as needed */
+  height: 50vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin: 2px solid gray;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}

@@ -1,20 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
+import ActiveChat from "../components/ActiveChat/ActiveChat";
+
 const ChatbotPage = () => {
   return (
     <main>
       <div>
-        <h1>Chatbot Page</h1>
-      </div>
-
-      <br />
-      <br />
-
-      <div>
-        Main Chatbot
-        <br />
-        <br />
+        <ActiveChat />
       </div>
     </main>
   );

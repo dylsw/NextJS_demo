@@ -6,7 +6,3 @@ export type Media = {
   PresignedURL: string;
   hostedURL: string;
 };
-
-export type Answer = {
-  Answer: string;
-};

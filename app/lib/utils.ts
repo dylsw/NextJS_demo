@@ -1,3 +1,5 @@
+// FUNCTIONS FOR MEDIA / CONTENT SHOWCASE
+
 export const fetchMediaData = async () => {
   try {
     const response = await fetch(
@@ -17,6 +19,8 @@ export const fetchMediaData = async () => {
   }
 };
 
+//FUNCTIONS FOR CHATBOT
+
 export const fetchChatbotData = async (question: string) => {
   try {
     const response = await fetch("http://127.0.0.1:5000/chatbot/get_answer", {
@@ -31,5 +35,25 @@ export const fetchChatbotData = async (question: string) => {
     return data.answer;
   } catch (error: any) {
     throw new Error(`Error fetching data: ${error.message}`);
+  }
+};
+
+export const reloadEmbeddings = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:5000/chatbot/reload_embeddings",
+      {
+        cache: "no-store",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    alert(data.status); // Display a simple alert with the response status
+  } catch (error) {
+    console.error("Error reloading embeddings:", error);
+    alert("Error reloading embeddings");
   }
 };
