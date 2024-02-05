@@ -1,9 +1,8 @@
 import React from "react";
+import StaticCarousel from "../components/StaticCarousel/StaticCarousel";
 
 import { Media } from "../lib/definitions";
 import { fetchMediaData } from "../lib/utils";
-
-import StaticCarousel from "../components/StaticCarousel/StaticCarousel";
 
 const ContentPage = async () => {
   const mediaList: Media[] = await fetchMediaData();
