@@ -46,7 +46,6 @@ const IdleCarousel: React.FC<IdleCarouselProps> = ({ mediaList }) => {
             >
               {media.MediaType === ".mp4" ? (
                 <video
-                  className="carousel-video"
                   src={
                     "http://127.0.0.1:5000/media/media_data/" + media.hostedURL
                   }
@@ -59,7 +58,6 @@ const IdleCarousel: React.FC<IdleCarouselProps> = ({ mediaList }) => {
                 </video>
               ) : (
                 <img
-                  className="carousel-image"
                   src={
                     "http://127.0.0.1:5000/media/media_data/" + media.hostedURL
                   }

@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 }
+
+.navbar-content {
+  height: 8vh;
+}
+
+.main-content {
+  height: 80vh;
+}
+
+.footer-content {
+  margin-top: 2vh;
+  height: 5vh;
+}

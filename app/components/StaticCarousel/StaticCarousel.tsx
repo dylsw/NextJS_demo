@@ -20,7 +20,6 @@ const StaticCarousel: React.FC<StaticCarouselProps> = ({ mediaList }) => {
             >
               {media.MediaType === ".mp4" ? (
                 <video
-                  className="slide-video"
                   src={
                     "http://127.0.0.1:5000/media/media_data/" + media.hostedURL
                   }
@@ -32,7 +31,6 @@ const StaticCarousel: React.FC<StaticCarouselProps> = ({ mediaList }) => {
                 </video>
               ) : (
                 <img
-                  className="slide-image"
                   src={
                     "http://127.0.0.1:5000/media/media_data/" + media.hostedURL
                   }

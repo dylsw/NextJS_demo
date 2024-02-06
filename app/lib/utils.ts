@@ -51,9 +51,8 @@ export const reloadEmbeddings = async () => {
       }
     );
     const data = await response.json();
-    alert(data.status); // Display a simple alert with the response status
+    console.log(data.status); // Display a simple alert with the response status
   } catch (error) {
     console.error("Error reloading embeddings:", error);
-    alert("Error reloading embeddings");
   }
 };

@@ -9,7 +9,7 @@ const HomeHero = () => {
         <div
           className="hero min-h-full"
           style={{
-            backgroundImage: "url(/SingHealthHomeHero.jpeg)",
+            backgroundImage: "url(/SingHealthHomeHero2.jpg)",
             maxHeight: "80%",
           }}
         >
@@ -19,10 +19,10 @@ const HomeHero = () => {
               <h1 className="mb-5 text-5xl font-bold">Greetings!</h1>
               <p className="mb-5">Welcome to SingHealth RedBox Kiosk.</p>
               <p className="mb-5">
-                Click on the button below to quickly jump to our AI Chatbot Page
-                now!
+                Click on the button below to chat with our very own AI Chatbot
+                Now!
               </p>
-              <Link href="/chatbot" className="btn btn-info">
+              <Link href="/chatbot" className="btn btn-primary">
                 AI Chatbot
               </Link>
             </div>
