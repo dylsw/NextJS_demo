@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, KeyboardEvent } from "react";
+import React, { useState, useEffect } from "react";
 import { fetchChatbotData } from "@/app/lib/utils";
 
 import "./ActiveChat.css";
@@ -24,13 +24,15 @@ const ActiveChat: React.FC = () => {
       { type: "user", text: userInput },
       { type: "bot", text: answer },
     ]);
+  };
 
-    // Scroll to the bottom of the chat container
+  useEffect(() => {
+    // Scroll to the bottom of the chat container when chatHistory changes
     const chatContainer = document.querySelector(".chat-container");
     if (chatContainer) {
       chatContainer.scrollTop = chatContainer.scrollHeight;
     }
-  };
+  }, [chatHistory]);
 
   return (
     <>

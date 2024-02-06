@@ -9,9 +9,6 @@ const Slideshow = async () => {
 
   return (
     <div>
-      This is the slideshow page
-      <br />
-      <br />
       <IdleCarousel mediaList={mediaList} />
     </div>
   );

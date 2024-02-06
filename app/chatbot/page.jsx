@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "next/link";
+import "./chatbot.css";
 
 import ActiveChat from "../components/ActiveChat/ActiveChat";
 
 const ChatbotPage = () => {
   return (
     <main>
-      <div>
+      <div className="chatbot-container">
         <ActiveChat />
       </div>
     </main>
